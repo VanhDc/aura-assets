@@ -1,0 +1,602 @@
+{
+ "unit": 19.05,
+ "gap": 0.85,
+ "rows": 5,
+ "field_w": 285.75,
+ "field_d": 95.25,
+ "row_h": [
+  9.4,
+  9.0,
+  8.75,
+  8.1,
+  8.1
+ ],
+ "row_tilt": [
+  9.0,
+  5.0,
+  1.0,
+  -3.5,
+  -6.5
+ ],
+ "plate_top_z": -1.5,
+ "typing_angle": 6.0,
+ "pivot_y": -59.125,
+ "keys": [
+  {
+   "id": 0,
+   "row": 0,
+   "x": 0.0,
+   "w": 1,
+   "label": "Esc",
+   "c": "accent",
+   "code": "Escape"
+  },
+  {
+   "id": 1,
+   "row": 0,
+   "x": 1.0,
+   "w": 1,
+   "label": "!\n1",
+   "c": "alpha",
+   "code": "Digit1"
+  },
+  {
+   "id": 2,
+   "row": 0,
+   "x": 2.0,
+   "w": 1,
+   "label": "@\n2",
+   "c": "alpha",
+   "code": "Digit2"
+  },
+  {
+   "id": 3,
+   "row": 0,
+   "x": 3.0,
+   "w": 1,
+   "label": "#\n3",
+   "c": "alpha",
+   "code": "Digit3"
+  },
+  {
+   "id": 4,
+   "row": 0,
+   "x": 4.0,
+   "w": 1,
+   "label": "$\n4",
+   "c": "alpha",
+   "code": "Digit4"
+  },
+  {
+   "id": 5,
+   "row": 0,
+   "x": 5.0,
+   "w": 1,
+   "label": "%\n5",
+   "c": "alpha",
+   "code": "Digit5"
+  },
+  {
+   "id": 6,
+   "row": 0,
+   "x": 6.0,
+   "w": 1,
+   "label": "^\n6",
+   "c": "alpha",
+   "code": "Digit6"
+  },
+  {
+   "id": 7,
+   "row": 0,
+   "x": 7.0,
+   "w": 1,
+   "label": "&\n7",
+   "c": "alpha",
+   "code": "Digit7"
+  },
+  {
+   "id": 8,
+   "row": 0,
+   "x": 8.0,
+   "w": 1,
+   "label": "*\n8",
+   "c": "alpha",
+   "code": "Digit8"
+  },
+  {
+   "id": 9,
+   "row": 0,
+   "x": 9.0,
+   "w": 1,
+   "label": "(\n9",
+   "c": "alpha",
+   "code": "Digit9"
+  },
+  {
+   "id": 10,
+   "row": 0,
+   "x": 10.0,
+   "w": 1,
+   "label": ")\n0",
+   "c": "alpha",
+   "code": "Digit0"
+  },
+  {
+   "id": 11,
+   "row": 0,
+   "x": 11.0,
+   "w": 1,
+   "label": "_\n-",
+   "c": "alpha",
+   "code": "Minus"
+  },
+  {
+   "id": 12,
+   "row": 0,
+   "x": 12.0,
+   "w": 1,
+   "label": "+\n=",
+   "c": "alpha",
+   "code": "Equal"
+  },
+  {
+   "id": 13,
+   "row": 0,
+   "x": 13.0,
+   "w": 2,
+   "label": "\u2190 Backspace",
+   "c": "modifier",
+   "code": "Backspace"
+  },
+  {
+   "id": 14,
+   "row": 1,
+   "x": 0.0,
+   "w": 1.5,
+   "label": "Tab",
+   "c": "modifier",
+   "code": "Tab"
+  },
+  {
+   "id": 15,
+   "row": 1,
+   "x": 1.5,
+   "w": 1,
+   "label": "Q",
+   "c": "alpha",
+   "code": "KeyQ"
+  },
+  {
+   "id": 16,
+   "row": 1,
+   "x": 2.5,
+   "w": 1,
+   "label": "W",
+   "c": "alpha",
+   "code": "KeyW"
+  },
+  {
+   "id": 17,
+   "row": 1,
+   "x": 3.5,
+   "w": 1,
+   "label": "E",
+   "c": "alpha",
+   "code": "KeyE"
+  },
+  {
+   "id": 18,
+   "row": 1,
+   "x": 4.5,
+   "w": 1,
+   "label": "R",
+   "c": "alpha",
+   "code": "KeyR"
+  },
+  {
+   "id": 19,
+   "row": 1,
+   "x": 5.5,
+   "w": 1,
+   "label": "T",
+   "c": "alpha",
+   "code": "KeyT"
+  },
+  {
+   "id": 20,
+   "row": 1,
+   "x": 6.5,
+   "w": 1,
+   "label": "Y",
+   "c": "alpha",
+   "code": "KeyY"
+  },
+  {
+   "id": 21,
+   "row": 1,
+   "x": 7.5,
+   "w": 1,
+   "label": "U",
+   "c": "alpha",
+   "code": "KeyU"
+  },
+  {
+   "id": 22,
+   "row": 1,
+   "x": 8.5,
+   "w": 1,
+   "label": "I",
+   "c": "alpha",
+   "code": "KeyI"
+  },
+  {
+   "id": 23,
+   "row": 1,
+   "x": 9.5,
+   "w": 1,
+   "label": "O",
+   "c": "alpha",
+   "code": "KeyO"
+  },
+  {
+   "id": 24,
+   "row": 1,
+   "x": 10.5,
+   "w": 1,
+   "label": "P",
+   "c": "alpha",
+   "code": "KeyP"
+  },
+  {
+   "id": 25,
+   "row": 1,
+   "x": 11.5,
+   "w": 1,
+   "label": "{\n[",
+   "c": "alpha",
+   "code": "BracketLeft"
+  },
+  {
+   "id": 26,
+   "row": 1,
+   "x": 12.5,
+   "w": 1,
+   "label": "}\n]",
+   "c": "alpha",
+   "code": "BracketRight"
+  },
+  {
+   "id": 27,
+   "row": 1,
+   "x": 13.5,
+   "w": 1.5,
+   "label": "|\n\\",
+   "c": "modifier",
+   "code": "Backslash"
+  },
+  {
+   "id": 28,
+   "row": 2,
+   "x": 0.0,
+   "w": 1.75,
+   "label": "Caps Lock",
+   "c": "modifier",
+   "code": "CapsLock"
+  },
+  {
+   "id": 29,
+   "row": 2,
+   "x": 1.75,
+   "w": 1,
+   "label": "A",
+   "c": "alpha",
+   "code": "KeyA"
+  },
+  {
+   "id": 30,
+   "row": 2,
+   "x": 2.75,
+   "w": 1,
+   "label": "S",
+   "c": "alpha",
+   "code": "KeyS"
+  },
+  {
+   "id": 31,
+   "row": 2,
+   "x": 3.75,
+   "w": 1,
+   "label": "D",
+   "c": "alpha",
+   "code": "KeyD"
+  },
+  {
+   "id": 32,
+   "row": 2,
+   "x": 4.75,
+   "w": 1,
+   "label": "F",
+   "c": "alpha",
+   "code": "KeyF"
+  },
+  {
+   "id": 33,
+   "row": 2,
+   "x": 5.75,
+   "w": 1,
+   "label": "G",
+   "c": "alpha",
+   "code": "KeyG"
+  },
+  {
+   "id": 34,
+   "row": 2,
+   "x": 6.75,
+   "w": 1,
+   "label": "H",
+   "c": "alpha",
+   "code": "KeyH"
+  },
+  {
+   "id": 35,
+   "row": 2,
+   "x": 7.75,
+   "w": 1,
+   "label": "J",
+   "c": "alpha",
+   "code": "KeyJ"
+  },
+  {
+   "id": 36,
+   "row": 2,
+   "x": 8.75,
+   "w": 1,
+   "label": "K",
+   "c": "alpha",
+   "code": "KeyK"
+  },
+  {
+   "id": 37,
+   "row": 2,
+   "x": 9.75,
+   "w": 1,
+   "label": "L",
+   "c": "alpha",
+   "code": "KeyL"
+  },
+  {
+   "id": 38,
+   "row": 2,
+   "x": 10.75,
+   "w": 1,
+   "label": ":\n;",
+   "c": "alpha",
+   "code": "Semicolon"
+  },
+  {
+   "id": 39,
+   "row": 2,
+   "x": 11.75,
+   "w": 1,
+   "label": "\"\n'",
+   "c": "alpha",
+   "code": "Quote"
+  },
+  {
+   "id": 40,
+   "row": 2,
+   "x": 12.75,
+   "w": 2.25,
+   "label": "\u21b5 Enter",
+   "c": "accent",
+   "code": "Enter"
+  },
+  {
+   "id": 41,
+   "row": 3,
+   "x": 0.0,
+   "w": 2.25,
+   "label": "\u21e7 Shift",
+   "c": "modifier",
+   "code": "ShiftLeft"
+  },
+  {
+   "id": 42,
+   "row": 3,
+   "x": 2.25,
+   "w": 1,
+   "label": "Z",
+   "c": "alpha",
+   "code": "KeyZ"
+  },
+  {
+   "id": 43,
+   "row": 3,
+   "x": 3.25,
+   "w": 1,
+   "label": "X",
+   "c": "alpha",
+   "code": "KeyX"
+  },
+  {
+   "id": 44,
+   "row": 3,
+   "x": 4.25,
+   "w": 1,
+   "label": "C",
+   "c": "alpha",
+   "code": "KeyC"
+  },
+  {
+   "id": 45,
+   "row": 3,
+   "x": 5.25,
+   "w": 1,
+   "label": "V",
+   "c": "alpha",
+   "code": "KeyV"
+  },
+  {
+   "id": 46,
+   "row": 3,
+   "x": 6.25,
+   "w": 1,
+   "label": "B",
+   "c": "alpha",
+   "code": "KeyB"
+  },
+  {
+   "id": 47,
+   "row": 3,
+   "x": 7.25,
+   "w": 1,
+   "label": "N",
+   "c": "alpha",
+   "code": "KeyN"
+  },
+  {
+   "id": 48,
+   "row": 3,
+   "x": 8.25,
+   "w": 1,
+   "label": "M",
+   "c": "alpha",
+   "code": "KeyM"
+  },
+  {
+   "id": 49,
+   "row": 3,
+   "x": 9.25,
+   "w": 1,
+   "label": "<\n,",
+   "c": "alpha",
+   "code": "Comma"
+  },
+  {
+   "id": 50,
+   "row": 3,
+   "x": 10.25,
+   "w": 1,
+   "label": ">\n.",
+   "c": "alpha",
+   "code": "Period"
+  },
+  {
+   "id": 51,
+   "row": 3,
+   "x": 11.25,
+   "w": 1,
+   "label": "?\n/",
+   "c": "alpha",
+   "code": "Slash"
+  },
+  {
+   "id": 52,
+   "row": 3,
+   "x": 12.25,
+   "w": 1.75,
+   "label": "\u21e7 Shift",
+   "c": "modifier",
+   "code": "ShiftRight"
+  },
+  {
+   "id": 53,
+   "row": 3,
+   "x": 14.0,
+   "w": 1,
+   "label": "\u2191",
+   "c": "accent",
+   "code": "ArrowUp"
+  },
+  {
+   "id": 54,
+   "row": 4,
+   "x": 0.0,
+   "w": 1.25,
+   "label": "Ctrl",
+   "c": "modifier",
+   "code": "ControlLeft"
+  },
+  {
+   "id": 55,
+   "row": 4,
+   "x": 1.25,
+   "w": 1.25,
+   "label": "Win",
+   "c": "modifier",
+   "code": "MetaLeft"
+  },
+  {
+   "id": 56,
+   "row": 4,
+   "x": 2.5,
+   "w": 1.25,
+   "label": "Alt",
+   "c": "modifier",
+   "code": "AltLeft"
+  },
+  {
+   "id": 57,
+   "row": 4,
+   "x": 3.75,
+   "w": 5.25,
+   "label": "",
+   "c": "alpha",
+   "code": "Space"
+  },
+  {
+   "id": 58,
+   "row": 4,
+   "x": 9.0,
+   "w": 1,
+   "label": "Alt",
+   "c": "modifier",
+   "code": "AltRight"
+  },
+  {
+   "id": 59,
+   "row": 4,
+   "x": 10.0,
+   "w": 1,
+   "label": "Fn",
+   "c": "modifier",
+   "code": "Fn"
+  },
+  {
+   "id": 60,
+   "row": 4,
+   "x": 11.0,
+   "w": 1,
+   "label": "Ctrl",
+   "c": "modifier",
+   "code": "ControlRight"
+  },
+  {
+   "id": 61,
+   "row": 4,
+   "x": 12.0,
+   "w": 1,
+   "label": "\u2190",
+   "c": "accent",
+   "code": "ArrowLeft"
+  },
+  {
+   "id": 62,
+   "row": 4,
+   "x": 13.0,
+   "w": 1,
+   "label": "\u2193",
+   "c": "accent",
+   "code": "ArrowDown"
+  },
+  {
+   "id": 63,
+   "row": 4,
+   "x": 14.0,
+   "w": 1,
+   "label": "\u2192",
+   "c": "accent",
+   "code": "ArrowRight"
+  }
+ ]
+}
