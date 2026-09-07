@@ -1,0 +1,299 @@
+{
+ "units": "mm",
+ "frame": "BB centre = origin. Blender: +X forward, +Z up, drive side = -Y. glTF (export_yup): +X forward, +Y up, drive side = +Z.",
+ "source": "ENVE Fray geometry chart 2026 (published), sizes 52/54/56/58",
+ "wheel": {
+  "bsd": 622,
+  "tyre": 45,
+  "radius": 356.0,
+  "circumference": 2236.8,
+  "spokes_front": 28,
+  "spokes_rear": 32,
+  "cross": 3,
+  "rim_depth": 32,
+  "rim_inner_width": 25
+ },
+ "drivetrain": {
+  "chainring": 40,
+  "cassette": [
+   10,
+   11,
+   13,
+   15,
+   17,
+   19,
+   21,
+   24,
+   28,
+   32,
+   38,
+   44
+  ],
+  "pitch": 12.7,
+  "chain_links": 118,
+  "crank": 175,
+  "chainline": 47.5,
+  "q_factor": 146,
+  "pitch_radius": "N*12.7/(2*pi) approx; exact = 12.7/(2*sin(pi/N))"
+ },
+ "drive_unit": {
+  "torque_nm": 60,
+  "power_w": 250,
+  "mass_kg": 1.9,
+  "planetary": {
+   "sun": 20,
+   "planets": 3,
+   "ring": 60,
+   "ratio_per_stage": 4,
+   "stages": 2,
+   "total": 16
+  },
+  "housing_mm": [
+   200,
+   120,
+   100
+  ]
+ },
+ "battery": {
+  "wh": 430,
+  "v": 43.2,
+  "ah": 10,
+  "series": 12,
+  "parallel": 2,
+  "cells": 24,
+  "cell": [
+   21,
+   70
+  ],
+  "pack_mm": [
+   355,
+   75,
+   50
+  ]
+ },
+ "brakes": {
+  "rotor": 160,
+  "pistons_per_caliper": 2,
+  "piston_mm": 21
+ },
+ "cockpit": {
+  "bar_width": 440,
+  "flare_deg": 12,
+  "stem": 80,
+  "display_in": 2.0
+ },
+ "sizes": {
+  "S": {
+   "label": "52",
+   "stack": 556,
+   "reach": 377,
+   "hta": 72.0,
+   "sta": 74.0,
+   "ht": 137,
+   "tt": 536,
+   "cs": 415,
+   "drop": 78,
+   "wb": 994,
+   "rake": 51,
+   "st": 464,
+   "standover": 739,
+   "bb": [
+    0,
+    0
+   ],
+   "rear_axle": [
+    -407.6,
+    78
+   ],
+   "front_axle": [
+    585.9,
+    78
+   ],
+   "front_axle_check_err": -0.46,
+   "head_tube_top": [
+    377,
+    556
+   ],
+   "head_tube_bottom": [
+    419.3,
+    425.7
+   ],
+   "seat_tube_top": [
+    -127.9,
+    446.0
+   ],
+   "top_tube_rear": [
+    -159.4,
+    556
+   ],
+   "tt_effective_check": 536.4,
+   "saddle_rail": [
+    -191.3,
+    667.1
+   ],
+   "ground_z": -278.0,
+   "bb_height": 278.0,
+   "front_centre": 591.1,
+   "trail_check": 62.0
+  },
+  "M": {
+   "label": "54",
+   "stack": 573,
+   "reach": 383,
+   "hta": 72.0,
+   "sta": 73.8,
+   "ht": 157,
+   "tt": 550,
+   "cs": 415,
+   "drop": 76,
+   "wb": 1006,
+   "rake": 51,
+   "st": 479,
+   "standover": 754,
+   "bb": [
+    0,
+    0
+   ],
+   "rear_axle": [
+    -408.0,
+    76
+   ],
+   "front_axle": [
+    598.1,
+    76
+   ],
+   "front_axle_check_err": 0.09,
+   "head_tube_top": [
+    383,
+    573
+   ],
+   "head_tube_bottom": [
+    431.5,
+    423.7
+   ],
+   "seat_tube_top": [
+    -133.6,
+    460.0
+   ],
+   "top_tube_rear": [
+    -166.5,
+    573
+   ],
+   "tt_effective_check": 549.5,
+   "saddle_rail": [
+    -197.8,
+    680.8
+   ],
+   "ground_z": -280.0,
+   "bb_height": 280.0,
+   "front_centre": 602.9,
+   "trail_check": 62.0
+  },
+  "L": {
+   "label": "56",
+   "stack": 591,
+   "reach": 389,
+   "hta": 72.6,
+   "sta": 73.5,
+   "ht": 172,
+   "tt": 564,
+   "cs": 415,
+   "drop": 76,
+   "wb": 1008,
+   "rake": 47,
+   "st": 501,
+   "standover": 775,
+   "bb": [
+    0,
+    0
+   ],
+   "rear_axle": [
+    -408.0,
+    76
+   ],
+   "front_axle": [
+    599.6,
+    76
+   ],
+   "front_axle_check_err": -0.37,
+   "head_tube_top": [
+    389,
+    591
+   ],
+   "head_tube_bottom": [
+    440.4,
+    426.9
+   ],
+   "seat_tube_top": [
+    -142.3,
+    480.4
+   ],
+   "top_tube_rear": [
+    -175.1,
+    591
+   ],
+   "tt_effective_check": 564.1,
+   "saddle_rail": [
+    -207.6,
+    700.9
+   ],
+   "ground_z": -280.0,
+   "bb_height": 280.0,
+   "front_centre": 604.4,
+   "trail_check": 62.3
+  },
+  "XL": {
+   "label": "58",
+   "stack": 610,
+   "reach": 396,
+   "hta": 72.6,
+   "sta": 73.2,
+   "ht": 194,
+   "tt": 580,
+   "cs": 417,
+   "drop": 74,
+   "wb": 1024,
+   "rake": 47,
+   "st": 519,
+   "standover": 793,
+   "bb": [
+    0,
+    0
+   ],
+   "rear_axle": [
+    -410.4,
+    74
+   ],
+   "front_axle": [
+    613.2,
+    74
+   ],
+   "front_axle_check_err": -0.39,
+   "head_tube_top": [
+    396,
+    610
+   ],
+   "head_tube_bottom": [
+    454.0,
+    424.9
+   ],
+   "seat_tube_top": [
+    -150.0,
+    496.8
+   ],
+   "top_tube_rear": [
+    -184.2,
+    610
+   ],
+   "tt_effective_check": 580.2,
+   "saddle_rail": [
+    -216.5,
+    717.0
+   ],
+   "ground_z": -282.0,
+   "bb_height": 282.0,
+   "front_centre": 617.7,
+   "trail_check": 62.3
+  }
+ }
+}

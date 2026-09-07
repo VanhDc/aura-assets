@@ -1,0 +1,79 @@
+{
+ "fps": 30,
+ "contact": {
+  "roll": [
+   0,
+   89
+  ]
+ },
+ "bike": {
+  "rest": [
+   0,
+   0
+  ],
+  "arrive": [
+   10,
+   226
+  ],
+  "geometry": [
+   300,
+   360
+  ],
+  "drive": [
+   400,
+   520
+  ],
+  "battery": [
+   600,
+   660
+  ],
+  "finish": [
+   700,
+   820
+  ],
+  "control": [
+   900,
+   960
+  ],
+  "configure": [
+   1000,
+   1000
+  ],
+  "sizes": [
+   1100,
+   1160
+  ]
+ },
+ "drivetrain": {
+  "run": [
+   0,
+   20
+  ],
+  "shift": [
+   100,
+   220
+  ],
+  "shifts": [
+   {
+    "frame": 120,
+    "from": 15,
+    "to": 21
+   },
+   {
+    "frame": 160,
+    "from": 21,
+    "to": 28
+   },
+   {
+    "frame": 200,
+    "from": 28,
+    "to": 38
+   }
+  ],
+  "shift_frames": 6,
+  "rest_cog": 15,
+  "links_per_frame": 2,
+  "keys_per_second": 60,
+  "note": "keys every 1/60 s (one chain link per key); sample by time = frame/30"
+ }
+}
