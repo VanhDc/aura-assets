@@ -1,0 +1,161 @@
+{
+ "_meta": {
+  "fps": 24,
+  "frameOffset": 0,
+  "time": "glTF seconds = frame / 24 (frame 0 = rest, every node at its rest or parked pose)",
+  "animation": "Timeline",
+  "duration_s": 22.5,
+  "usage": "one AnimationClip; cut sub-ranges with THREE.AnimationUtils.subclip(clip, name, start, end, 24) and keep only the tracks of the clip's 'nodes' (every other node is static or parked inside the range). Ranges end on a held pose; 'off' = play the same range reversed.",
+  "morph": "Film_Shield carries one morph target 'Extend' (weight 0 = rolled up in the slot, 1 = 100 mm out); its weights track is part of take_photo / shield_eject / print_out"
+ },
+ "take_photo": {
+  "start": 1,
+  "end": 62,
+  "fps": 24,
+  "start_s": 0.04167,
+  "end_s": 2.58333,
+  "nodes": [
+   "Print",
+   "Shutter_Button",
+   "Film_Shield (morph weights)"
+  ],
+  "what": "shutter press 1.2 mm (f1-10), motor eject of the print 113.9 mm under the film shield (f14-56, 4-frame ramps), settle (f57-62)"
+ },
+ "shield_eject": {
+  "start": 14,
+  "end": 62,
+  "fps": 24,
+  "start_s": 0.58333,
+  "end_s": 2.58333,
+  "nodes": [
+   "Print",
+   "Film_Shield (morph weights)"
+  ],
+  "what": "the eject part of take_photo only: print + shield, for scroll scrubbing"
+ },
+ "print_out": {
+  "start": 64,
+  "end": 80,
+  "fps": 24,
+  "start_s": 2.66667,
+  "end_s": 3.33333,
+  "nodes": [
+   "Print",
+   "Film_Shield (morph weights)"
+  ],
+  "what": "the print drawn 30 mm out while the shield springs back into the slot (reset to rest by f83, outside the range)"
+ },
+ "filter_starburst_on": {
+  "start": 101,
+  "end": 138,
+  "fps": 24,
+  "start_s": 4.20833,
+  "end_s": 5.75,
+  "nodes": [
+   "Filter_Starburst"
+  ],
+  "what": "fly in, stop 4.5 mm out, turn -25 to 0 deg until the notch meets the light meter, push home, click (0.35 mm rebound)"
+ },
+ "filter_redvignette_on": {
+  "start": 151,
+  "end": 188,
+  "fps": 24,
+  "start_s": 6.29167,
+  "end_s": 7.83333,
+  "nodes": [
+   "Filter_RedVignette"
+  ],
+  "what": "as starburst"
+ },
+ "filter_orange_on": {
+  "start": 201,
+  "end": 228,
+  "fps": 24,
+  "start_s": 8.375,
+  "end_s": 9.5,
+  "nodes": [
+   "Filter_Orange"
+  ],
+  "what": "fly in, press straight home, click"
+ },
+ "filter_yellow_on": {
+  "start": 241,
+  "end": 268,
+  "fps": 24,
+  "start_s": 10.04167,
+  "end_s": 11.16667,
+  "nodes": [
+   "Filter_Yellow"
+  ],
+  "what": "fly in, press straight home, click"
+ },
+ "filter_blue_on": {
+  "start": 281,
+  "end": 308,
+  "fps": 24,
+  "start_s": 11.70833,
+  "end_s": 12.83333,
+  "nodes": [
+   "Filter_Blue"
+  ],
+  "what": "fly in, press straight home, click"
+ },
+ "lens_cover_on": {
+  "start": 321,
+  "end": 348,
+  "fps": 24,
+  "start_s": 13.375,
+  "end_s": 14.5,
+  "nodes": [
+   "Lens_Cover"
+  ],
+  "what": "fly in, press straight home, click"
+ },
+ "lens_explode": {
+  "start": 401,
+  "end": 448,
+  "fps": 24,
+  "start_s": 16.70833,
+  "end_s": 18.66667,
+  "nodes": [
+   "Lens_Glass_Front",
+   "Lens_Glass_Rear",
+   "Lens_Ring_1",
+   "Lens_Ring_2",
+   "Light_Meter"
+  ],
+  "what": "0 = assembled, end = separated along the optical axis: light meter forward and down, front glass -40 mm, rear glass -30, text ring -22, stepped bezel -12; the barrel (filter mount) stays"
+ },
+ "body_explode": {
+  "start": 451,
+  "end": 498,
+  "fps": 24,
+  "start_s": 18.79167,
+  "end_s": 20.75,
+  "nodes": [
+   "Body_Front",
+   "Body_Rear",
+   "Film_Door",
+   "Flash_Bezel",
+   "Flash_Reflector",
+   "Flash_Window",
+   "Lens_Assembly",
+   "Plus_Button",
+   "Shutter_Button",
+   "Viewfinder_Prism",
+   "Viewfinder_Window"
+  ],
+  "what": "0 = assembled, end = exploded: rear shell +40 mm back, front shell up and forward, film door down and forward, lens forward, flash and viewfinder parts out of their pockets, film pack stays in the middle"
+ },
+ "door_open": {
+  "start": 501,
+  "end": 530,
+  "fps": 24,
+  "start_s": 20.875,
+  "end_s": 22.08333,
+  "nodes": [
+   "Film_Door"
+  ],
+  "what": "the film door drops open 90 deg on its rear-bottom hinge (with a 2.5 deg overshoot), showing the film pack in the chamber"
+ }
+}

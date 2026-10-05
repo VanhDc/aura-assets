@@ -1,0 +1,796 @@
+{
+ "_about": "Node map of assets/model/now-plus.glb (glTF Y-up, metres, real scale: 113.3 x 150.3 x 94.4 mm closed). Every name in the page contract exists with exactly that name; this file adds where each sits, what else is there, and the data the page needs. Labels are also on the nodes as extras (three.js: object.userData.label).",
+ "contract": {
+  "Camera_Body": {
+   "exists": true,
+   "path": "Camera_Body",
+   "label": "Polaroid Now+ Generation 2"
+  },
+  "Shutter_Button": {
+   "exists": true,
+   "path": "Camera_Body/Body_Front/Shutter_Button",
+   "label": "Shutter"
+  },
+  "Flash": {
+   "exists": true,
+   "path": "Camera_Body/Body_Front/Flash",
+   "label": "Flash"
+  },
+  "Lens_Assembly": {
+   "exists": true,
+   "path": "Camera_Body/Body_Front/Lens_Assembly",
+   "label": "Two-lens autofocus"
+  },
+  "Lens_Ring_1": {
+   "exists": true,
+   "path": "Camera_Body/Body_Front/Lens_Assembly/Lens_Ring_1",
+   "label": "Lens ring"
+  },
+  "Lens_Ring_2": {
+   "exists": true,
+   "path": "Camera_Body/Body_Front/Lens_Assembly/Lens_Ring_2",
+   "label": "Lens text ring"
+  },
+  "Lens_Glass_Front": {
+   "exists": true,
+   "path": "Camera_Body/Body_Front/Lens_Assembly/Lens_Glass_Front",
+   "label": "Standard lens, 102.35 mm (40 mm equivalent)"
+  },
+  "Lens_Glass_Rear": {
+   "exists": true,
+   "path": "Camera_Body/Body_Front/Lens_Assembly/Lens_Glass_Rear",
+   "label": "Close-up lens, 94.96 mm (35 mm equivalent)"
+  },
+  "Filter_Starburst": {
+   "exists": true,
+   "path": "Camera_Body/Filter_Starburst",
+   "label": "Starburst filter"
+  },
+  "Filter_RedVignette": {
+   "exists": true,
+   "path": "Camera_Body/Filter_RedVignette",
+   "label": "Red vignette filter"
+  },
+  "Filter_Orange": {
+   "exists": true,
+   "path": "Camera_Body/Filter_Orange",
+   "label": "Orange filter"
+  },
+  "Filter_Yellow": {
+   "exists": true,
+   "path": "Camera_Body/Filter_Yellow",
+   "label": "Yellow filter"
+  },
+  "Filter_Blue": {
+   "exists": true,
+   "path": "Camera_Body/Filter_Blue",
+   "label": "Blue filter"
+  },
+  "Lens_Cover": {
+   "exists": true,
+   "path": "Camera_Body/Lens_Cover",
+   "label": "Lens cover"
+  },
+  "Film_Shield": {
+   "exists": true,
+   "path": "Camera_Body/Film_Door/Film_Shield",
+   "label": "Film shield"
+  },
+  "Print": {
+   "exists": true,
+   "path": "Camera_Body/Print",
+   "label": "i-Type print"
+  },
+  "LED_Counter": {
+   "exists": true,
+   "path": "Camera_Body/Body_Rear/LED_Counter",
+   "label": "Frame counter"
+  }
+ },
+ "groups": {
+  "Body_Front": "front shell with the lens, flash, viewfinder, shutter, + button, logo type and stripe (moves as one in body_explode)",
+  "Body_Rear": "rear shell with the back controls, LED counter, eyepiece, USB-C, strap pins, tripod mount",
+  "Film_Door": "the film door, pivot on its rear-bottom hinge (door_open rotates it); children: Film_Shield, the two rollers, the raised i-Type film type",
+  "Film_Pack": "an i-Type pack in the chamber (93 x 109 x 18 mm, estimated), seen when the door opens or the body explodes"
+ },
+ "lens": {
+  "Lens_Ring_1": "stepped front bezel (8 fine rings) that also seats the glass",
+  "Lens_Ring_2": "printed ring: POLAROID, AUTOFOCUS, FILTER SENSOR, 35-40mm 1:11",
+  "Lens_Glass_Front": {
+   "label": "Standard lens",
+   "focal_mm": 102.35,
+   "equivalent_mm": 40
+  },
+  "Lens_Glass_Rear": {
+   "label": "Close-up lens",
+   "focal_mm": 94.96,
+   "equivalent_mm": 35
+  },
+  "Lens_Filter_Mount": "the barrel the filters press onto (stays on the body in lens_explode)",
+  "Light_Meter": "the light-meter lug at 6 o'clock (+ ring and window)",
+  "apertures": "f/64 to f/11",
+  "field_of_view_deg": {
+   "horizontal": 40,
+   "vertical": 41
+  },
+  "note": "the model's two glass elements stand for the two-lens autofocus (standard and close-up); the real camera switches between them internally"
+ },
+ "filters": {
+  "names": [
+   "Filter_Starburst",
+   "Filter_RedVignette",
+   "Filter_Orange",
+   "Filter_Yellow",
+   "Filter_Blue",
+   "Lens_Cover"
+  ],
+  "rest": "PARKED off the lens (58 mm right, 72 mm in front, 22 mm up, tilted) at frame 0 and between clips; userData.parked = true. Hide every filter not in use (node.visible = false) and show one when its clip starts.",
+  "children": "<name>_Ring (black rim, notched at 6 o'clock for the light meter), <name>_Disc (tinted glass; starburst clear), <name>_Notch (white alignment mark, starburst and red vignette)",
+  "seat": "on the lens axis; clips end seated, play reversed to take one off"
+ },
+ "led": {
+  "node": "LED_Counter",
+  "segments": {
+   "a": "LED_Seg_a",
+   "b": "LED_Seg_b",
+   "c": "LED_Seg_c",
+   "d": "LED_Seg_d",
+   "e": "LED_Seg_e",
+   "f": "LED_Seg_f",
+   "g": "LED_Seg_g"
+  },
+  "period": "LED_Period",
+  "layout": "standard seven-segment: a top, b top-right, c bottom-right, d bottom, e bottom-left, f top-left, g middle; the period sits bottom-right, lit = flash on",
+  "digits": {
+   "0": "abcdef",
+   "1": "bc",
+   "2": "abdeg",
+   "3": "abcdg",
+   "4": "bcfg",
+   "5": "acdfg",
+   "6": "acdefg",
+   "7": "abc",
+   "8": "abcdefg",
+   "9": "abcdfg"
+  },
+  "material": "LED_Amber (emissive); hide a segment to switch it off",
+  "window": "LED_Window (smoked cover)"
+ },
+ "print": {
+  "node": "Print",
+  "size_mm": [
+   88,
+   107
+  ],
+  "rest": "fully inside the film pack (ejects 113.9 mm in take_photo)",
+  "texture": "print.webp on material Print: warm white frame #F3F0E8, picture area opacifier blue #3A4A5A; replace the map to show a developing photo",
+  "picture_uv_rect_gltf": {
+   "u": [
+    0.0511,
+    0.9489
+   ],
+   "v": [
+    0.0561,
+    0.7757
+   ],
+   "note": "glTF UV, v = 0 at the image top edge; the chin (wide border) is at the bottom of the texture"
+  },
+  "back": "material Print_Back (black)"
+ },
+ "variants": {
+  "extension": "KHR_materials_variants",
+  "names": [
+   "Black",
+   "White",
+   "Forest Green"
+  ],
+  "mapped": "shell (front, rear, door), the raised i-Type type, the logo type ink, the five stripe bands (Forest Green: one lime stripe and lime type)"
+ },
+ "occlusion": "Baked AO atlas (texture 'ao_atlas', Cycles 20 mm) as occlusionTexture on TEXCOORD_1 (three.js: aoMap on uv1) for Shell_Front, Shell_Rear, Film_Door, Stripe, Type_polaroid, Type_NOWplus, Type_iType and Flash_Reflector, on every material those use incl. the White / Forest Green variants (Shell*, Shell_Type*, Type_Ink*, Stripe_0-4, Stripe_Lime, Chrome_Flash). The flash dish's AO is scaled x0.5 for its clear cover.",
+ "cameras": {
+  "Cam_Base": {
+   "position_m": [
+    -0.10526,
+    -0.39858,
+    0.22073
+   ],
+   "quaternion_xyzw": [
+    0.473318,
+    -0.189302,
+    0.104932,
+    0.853888
+   ],
+   "target_m": [
+    0.00839,
+    0.03177,
+    -0.02299
+   ],
+   "yfov_rad": 0.399596,
+   "yfov_deg": 22.895,
+   "aspectRatio": 1.777778,
+   "frame": "16:9"
+  },
+  "Cam_Base_9x16": {
+   "position_m": [
+    -0.16631,
+    -0.62976,
+    0.35165
+   ],
+   "quaternion_xyzw": [
+    0.473318,
+    -0.189302,
+    0.104932,
+    0.853888
+   ],
+   "target_m": [
+    0.00839,
+    0.03177,
+    -0.02299
+   ],
+   "yfov_rad": 0.755489,
+   "yfov_deg": 43.286,
+   "aspectRatio": 0.5625,
+   "frame": "9:16"
+  },
+  "Cam_Colour": {
+   "position_m": [
+    0.33141,
+    0.20236,
+    0.42919
+   ],
+   "quaternion_xyzw": [
+    -0.131591,
+    0.3224,
+    0.04531,
+    0.936317
+   ],
+   "target_m": [
+    -0.0024,
+    0.04688,
+    0.00192
+   ],
+   "yfov_rad": 0.399596,
+   "yfov_deg": 22.895,
+   "aspectRatio": 1.777778,
+   "frame": "16:9"
+  },
+  "Cam_Colour_9x16": {
+   "position_m": [
+    0.52364,
+    0.29188,
+    0.67522
+   ],
+   "quaternion_xyzw": [
+    -0.131591,
+    0.3224,
+    0.04531,
+    0.936317
+   ],
+   "target_m": [
+    -0.0024,
+    0.04688,
+    0.00192
+   ],
+   "yfov_rad": 0.755489,
+   "yfov_deg": 43.286,
+   "aspectRatio": 0.5625,
+   "frame": "9:16"
+  },
+  "Cam_Explode": {
+   "position_m": [
+    -0.47245,
+    0.38666,
+    0.6167
+   ],
+   "quaternion_xyzw": [
+    -0.196584,
+    -0.318454,
+    -0.067689,
+    0.924857
+   ],
+   "target_m": [
+    0.0044,
+    0.04182,
+    0.00637
+   ],
+   "yfov_rad": 0.399596,
+   "yfov_deg": 22.895,
+   "aspectRatio": 1.777778,
+   "frame": "16:9"
+  },
+  "Cam_Explode_9x16": {
+   "position_m": [
+    -0.74646,
+    0.58482,
+    0.96743
+   ],
+   "quaternion_xyzw": [
+    -0.196584,
+    -0.318454,
+    -0.067689,
+    0.924857
+   ],
+   "target_m": [
+    0.0044,
+    0.04182,
+    0.00637
+   ],
+   "yfov_rad": 0.755489,
+   "yfov_deg": 43.286,
+   "aspectRatio": 0.5625,
+   "frame": "9:16"
+  },
+  "Cam_Filters": {
+   "position_m": [
+    -0.1384,
+    0.11839,
+    0.27749
+   ],
+   "quaternion_xyzw": [
+    -0.083779,
+    -0.274589,
+    -0.024023,
+    0.957604
+   ],
+   "target_m": [
+    0.0267,
+    0.06345,
+    0.01327
+   ],
+   "yfov_rad": 0.287293,
+   "yfov_deg": 16.461,
+   "aspectRatio": 1.777778,
+   "frame": "16:9"
+  },
+  "Cam_Filters_9x16": {
+   "position_m": [
+    -0.22013,
+    0.14558,
+    0.40828
+   ],
+   "quaternion_xyzw": [
+    -0.08378,
+    -0.274588,
+    -0.024023,
+    0.957604
+   ],
+   "target_m": [
+    0.0267,
+    0.06345,
+    0.01327
+   ],
+   "yfov_rad": 0.55237,
+   "yfov_deg": 31.648,
+   "aspectRatio": 0.5625,
+   "frame": "9:16"
+  },
+  "Cam_Hero": {
+   "position_m": [
+    -0.19362,
+    0.18592,
+    0.54866
+   ],
+   "quaternion_xyzw": [
+    -0.118249,
+    -0.240119,
+    -0.029483,
+    0.963063
+   ],
+   "target_m": [
+    0.07599,
+    0.04273,
+    0.04161
+   ],
+   "yfov_rad": 0.399596,
+   "yfov_deg": 22.895,
+   "aspectRatio": 1.777778,
+   "frame": "16:9"
+  },
+  "Cam_Hero_9x16": {
+   "position_m": [
+    -0.26545,
+    0.12304,
+    0.5574
+   ],
+   "quaternion_xyzw": [
+    -0.118249,
+    -0.240119,
+    -0.029483,
+    0.963063
+   ],
+   "target_m": [
+    0.01554,
+    -0.02619,
+    0.02893
+   ],
+   "yfov_rad": 0.755489,
+   "yfov_deg": 43.286,
+   "aspectRatio": 0.5625,
+   "frame": "9:16"
+  },
+  "Cam_Lens": {
+   "position_m": [
+    -0.28251,
+    0.14011,
+    0.21554
+   ],
+   "quaternion_xyzw": [
+    -0.089598,
+    -0.512217,
+    -0.053836,
+    0.852472
+   ],
+   "target_m": [
+    0.03042,
+    0.06478,
+    0.04916
+   ],
+   "yfov_rad": 0.287293,
+   "yfov_deg": 16.461,
+   "aspectRatio": 1.777778,
+   "frame": "16:9"
+  },
+  "Cam_Lens_9x16": {
+   "position_m": [
+    -0.44781,
+    0.17991,
+    0.30343
+   ],
+   "quaternion_xyzw": [
+    -0.089598,
+    -0.512217,
+    -0.053836,
+    0.852472
+   ],
+   "target_m": [
+    0.03042,
+    0.06478,
+    0.04916
+   ],
+   "yfov_rad": 0.55237,
+   "yfov_deg": 31.648,
+   "aspectRatio": 0.5625,
+   "frame": "9:16"
+  },
+  "Cam_SlipColour": {
+   "position_m": [
+    0.30183,
+    0.23953,
+    -0.44106
+   ],
+   "quaternion_xyzw": [
+    -0.052217,
+    0.939228,
+    0.165611,
+    0.296137
+   ],
+   "target_m": [
+    -0.00433,
+    0.04525,
+    -0.00381
+   ],
+   "yfov_rad": 0.399596,
+   "yfov_deg": 22.895,
+   "aspectRatio": 1.777778,
+   "frame": "16:9"
+  },
+  "Cam_SlipColour_9x16": {
+   "position_m": [
+    0.47689,
+    0.35062,
+    -0.69108
+   ],
+   "quaternion_xyzw": [
+    -0.052217,
+    0.939228,
+    0.165611,
+    0.296137
+   ],
+   "target_m": [
+    -0.00433,
+    0.04525,
+    -0.00381
+   ],
+   "yfov_rad": 0.755489,
+   "yfov_deg": 43.286,
+   "aspectRatio": 0.5625,
+   "frame": "9:16"
+  },
+  "Cam_SlipFilm": {
+   "position_m": [
+    -0.14832,
+    0.24587,
+    0.39513
+   ],
+   "quaternion_xyzw": [
+    -0.269614,
+    -0.199858,
+    -0.057308,
+    0.940256
+   ],
+   "target_m": [
+    0.01127,
+    0.00069,
+    0.03669
+   ],
+   "yfov_rad": 0.399596,
+   "yfov_deg": 22.895,
+   "aspectRatio": 1.777778,
+   "frame": "16:9"
+  },
+  "Cam_SlipFilm_9x16": {
+   "position_m": [
+    -0.23435,
+    0.37803,
+    0.58835
+   ],
+   "quaternion_xyzw": [
+    -0.269614,
+    -0.199858,
+    -0.057308,
+    0.940256
+   ],
+   "target_m": [
+    0.01127,
+    0.00069,
+    0.03669
+   ],
+   "yfov_rad": 0.755489,
+   "yfov_deg": 43.286,
+   "aspectRatio": 0.5625,
+   "frame": "9:16"
+  },
+  "Cam_SlipFilter": {
+   "position_m": [
+    -0.02777,
+    0.08675,
+    0.22369
+   ],
+   "quaternion_xyzw": [
+    -0.043453,
+    -0.087073,
+    -0.003802,
+    0.995247
+   ],
+   "target_m": [
+    0.01162,
+    0.06691,
+    0.00028
+   ],
+   "yfov_rad": 0.287293,
+   "yfov_deg": 16.461,
+   "aspectRatio": 1.777778,
+   "frame": "16:9"
+  },
+  "Cam_SlipFilter_9x16": {
+   "position_m": [
+    -0.04533,
+    0.0956,
+    0.32326
+   ],
+   "quaternion_xyzw": [
+    -0.043453,
+    -0.087073,
+    -0.003802,
+    0.995247
+   ],
+   "target_m": [
+    0.01162,
+    0.06691,
+    0.00028
+   ],
+   "yfov_rad": 0.55237,
+   "yfov_deg": 31.648,
+   "aspectRatio": 0.5625,
+   "frame": "9:16"
+  },
+  "Cam_Specs": {
+   "position_m": [
+    0.56199,
+    0.1139,
+    0.30382
+   ],
+   "quaternion_xyzw": [
+    -0.044861,
+    0.514332,
+    0.026955,
+    0.855993
+   ],
+   "target_m": [
+    -0.00205,
+    0.04676,
+    0.00391
+   ],
+   "yfov_rad": 0.399596,
+   "yfov_deg": 22.895,
+   "aspectRatio": 1.777778,
+   "frame": "16:9"
+  },
+  "Cam_Specs_9x16": {
+   "position_m": [
+    0.88795,
+    0.1527,
+    0.47713
+   ],
+   "quaternion_xyzw": [
+    -0.044861,
+    0.514332,
+    0.026955,
+    0.855993
+   ],
+   "target_m": [
+    -0.00205,
+    0.04676,
+    0.00391
+   ],
+   "yfov_rad": 0.755489,
+   "yfov_deg": 43.286,
+   "aspectRatio": 0.5625,
+   "frame": "9:16"
+  },
+  "Cam_Take": {
+   "position_m": [
+    -0.22084,
+    0.15227,
+    0.56453
+   ],
+   "quaternion_xyzw": [
+    -0.102244,
+    -0.206773,
+    -0.021733,
+    0.972789
+   ],
+   "target_m": [
+    0.02352,
+    0.02457,
+    0.01569
+   ],
+   "yfov_rad": 0.399596,
+   "yfov_deg": 22.895,
+   "aspectRatio": 1.777778,
+   "frame": "16:9"
+  },
+  "Cam_Take_9x16": {
+   "position_m": [
+    -0.34544,
+    0.21739,
+    0.8444
+   ],
+   "quaternion_xyzw": [
+    -0.102244,
+    -0.206773,
+    -0.021733,
+    0.972789
+   ],
+   "target_m": [
+    0.02352,
+    0.02457,
+    0.01569
+   ],
+   "yfov_rad": 0.755489,
+   "yfov_deg": 43.286,
+   "aspectRatio": 0.5625,
+   "frame": "9:16"
+  }
+ },
+ "camera_states": {
+  "hero": "Cam_Hero (= the load film's last frame; Cam_Hero_9x16 = its 9:16 poster)",
+  "colour": "Cam_Colour",
+  "lens": "Cam_Lens (frames lens_explode)",
+  "filters": "Cam_Filters",
+  "explode": "Cam_Explode",
+  "take": "Cam_Take",
+  "base": "Cam_Base",
+  "specs": "Cam_Specs",
+  "slip_colour": "Cam_SlipColour (back three-quarter)",
+  "slip_filter": "Cam_SlipFilter (lens macro)",
+  "slip_film": "Cam_SlipFilm (play door_open)",
+  "portrait": "every camera has a <name>_9x16 twin (same target, pulled back, 9:16 aspect)"
+ },
+ "all_nodes": [
+  "Battery_LED",
+  "Body_Front",
+  "Body_Rear",
+  "Cam_Base",
+  "Cam_Base_9x16",
+  "Cam_Colour",
+  "Cam_Colour_9x16",
+  "Cam_Explode",
+  "Cam_Explode_9x16",
+  "Cam_Filters",
+  "Cam_Filters_9x16",
+  "Cam_Hero",
+  "Cam_Hero_9x16",
+  "Cam_Lens",
+  "Cam_Lens_9x16",
+  "Cam_SlipColour",
+  "Cam_SlipColour_9x16",
+  "Cam_SlipFilm",
+  "Cam_SlipFilm_9x16",
+  "Cam_SlipFilter",
+  "Cam_SlipFilter_9x16",
+  "Cam_Specs",
+  "Cam_Specs_9x16",
+  "Cam_Take",
+  "Cam_Take_9x16",
+  "Camera_Body",
+  "Door_Roller_Lower",
+  "Door_Roller_Upper",
+  "Eyepiece_Window",
+  "Film_Door",
+  "Film_Door_Arrow",
+  "Film_Door_Button",
+  "Film_Pack",
+  "Film_Pack_Tab",
+  "Film_Shield",
+  "Filter_Blue",
+  "Filter_Blue_Disc",
+  "Filter_Blue_Ring",
+  "Filter_Orange",
+  "Filter_Orange_Disc",
+  "Filter_Orange_Ring",
+  "Filter_RedVignette",
+  "Filter_RedVignette_Disc",
+  "Filter_RedVignette_Notch",
+  "Filter_RedVignette_Ring",
+  "Filter_Starburst",
+  "Filter_Starburst_Disc",
+  "Filter_Starburst_Notch",
+  "Filter_Starburst_Ring",
+  "Filter_Yellow",
+  "Filter_Yellow_Disc",
+  "Filter_Yellow_Ring",
+  "Flash",
+  "Flash_Bezel",
+  "Flash_Button",
+  "Flash_Icon",
+  "Flash_Reflector",
+  "Flash_Window",
+  "LED_Counter",
+  "LED_Period",
+  "LED_Seg_a",
+  "LED_Seg_b",
+  "LED_Seg_c",
+  "LED_Seg_d",
+  "LED_Seg_e",
+  "LED_Seg_f",
+  "LED_Seg_g",
+  "LED_Window",
+  "Lens_Assembly",
+  "Lens_Cover",
+  "Lens_Cover_Disc",
+  "Lens_Cover_Ring",
+  "Lens_Filter_Mount",
+  "Lens_Glass_Front",
+  "Lens_Glass_Rear",
+  "Lens_Ring_1",
+  "Lens_Ring_2",
+  "Light_Meter",
+  "Light_Meter_Housing",
+  "Light_Meter_Ring",
+  "Light_Meter_Window",
+  "Mode_LED",
+  "Plus_Button",
+  "Plus_Symbol_H",
+  "Plus_Symbol_V",
+  "Power_Button",
+  "Power_Icon",
+  "Power_Icon_Bar",
+  "Print",
+  "Shell_Front",
+  "Shell_Rear",
+  "Shutter_Button",
+  "Strap_Loop_Pin_L",
+  "Strap_Loop_Pin_R",
+  "Stripe",
+  "Tripod_Mount",
+  "Type_NOWplus",
+  "Type_iType",
+  "Type_polaroid",
+  "USB_C_Port",
+  "USB_C_Tongue",
+  "Viewfinder",
+  "Viewfinder_Prism",
+  "Viewfinder_Window"
+ ]
+}
